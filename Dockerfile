@@ -1,12 +1,12 @@
-FROM node:16-slim
+FROM node:16
 
 WORKDIR /app
 
-COPY  ./package.json /app
+COPY  package*.json ./
 
 RUN npm install 
 
-COPY . /app
+COPY . .
 
 EXPOSE 3000
 
